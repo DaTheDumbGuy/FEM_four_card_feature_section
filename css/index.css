@@ -1,0 +1,109 @@
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-size:15px;
+    font-family: "Poppins", sans-serif;
+    background:hsl(0, 0%, 98%);
+    padding-bottom:60px;
+}
+.fc_header{
+    margin:60px auto;
+    max-width:500px;
+    text-align: center;
+}
+.fc_header h1{
+    color: hsl(234, 12%, 34%);
+    font-size:1.6em;
+    font-weight:200;
+}
+.fc_header h2{
+    color: hsl(234, 12%, 34%);
+    font-size:1.6em;
+    font-weight:600;
+    margin-bottom:15px;
+}
+.fc_header p{
+    color: hsl(229, 6%, 66%);
+    text-wrap:balance;
+}
+/* Main content */
+main{
+    padding:0 25px;
+}
+.fc_container{  
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-rows:repeat(4,1fr);
+    grid-template-columns:repeat(1,1fr);
+    justify-items: center;
+    row-gap:25px;
+    /* background:yellowgreen; */
+}
+.fc_container > .cards{
+    display:flex;
+    flex-direction: column;
+    max-width:360px;
+    padding:20px 25px;
+    box-shadow:0 5px 10px hsl(229, 6%, 66%);
+    border-top:5px solid hsl(180, 62%, 55%);
+    border-radius:5px;
+}
+.fc_container > .cards:nth-of-type(2){
+    border-top:5px solid hsl(0, 78%, 62%);
+}
+.fc_container > .cards:nth-of-type(3){
+    border-top:5px solid hsl(34, 97%, 64%);
+}
+.fc_container > .cards:nth-of-type(4){
+    border-top:5px solid hsl(212, 86%, 64%);
+}
+.fc_container > .cards h2{
+    color: hsl(234, 12%, 34%);
+    font-size:1.3em;
+    margin-bottom:5px;
+}
+.fc_container > .cards p{
+    margin-bottom:20px;
+    font-size:0.9em;
+    color: hsl(229, 6%, 66%);
+}
+.fc_container > .cards img{
+    align-self: flex-end;
+    max-width:64px;
+}
+
+@media (min-width:1024px) {
+
+    .fc_header p{
+        text-wrap:wrap;
+    }
+
+    .fc_container{
+        grid-template-rows:repeat(4,0.5fr);
+        grid-template-columns:repeat(3,1fr);
+        gap:25px;
+    }
+    .fc_container .cards {
+        max-width:unset;
+    }
+    .fc_container > .cards p{
+        margin-bottom:40px;
+    }
+    .fc_container .cards:nth-of-type(1){
+        grid-area: 2/1/4/2;
+    }
+    .fc_container .cards:nth-of-type(2){
+        grid-area: 1/2/3/3;
+    }
+    .fc_container .cards:nth-of-type(3){
+        grid-area: 3/2/5/3;
+    }
+    .fc_container .cards:nth-of-type(4){
+        grid-area: 2/3/4/4;
+    }
+
+}
