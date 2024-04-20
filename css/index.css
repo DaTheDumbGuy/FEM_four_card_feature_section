@@ -77,7 +77,9 @@ main{
 }
 
 @media (min-width:1024px) {
-
+    .fc_header h1, .fc_header h2{
+        font-size:2.3em;
+    }
     .fc_header p{
         text-wrap:wrap;
     }
